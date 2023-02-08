@@ -1,0 +1,118 @@
+Sample Output File
+
+----------------------------------------------------------------------------------------------------
+Task 1. Requests count for each URL path, sorted by request count (ascending)
+
+INPUT 1: ./gradlew run --args="Task1a_PathCountAscending input_access_log task1a"
+
+OUTPUT 1:
+ /       31
+/AmavisNew.html 11
+/DCC.html       2
+....
+....
+/twiki/pub/TWiki/TWikiLogos/twikiRobot46x50.gif 32
+/twiki/pub/TWiki/TWikiLogos/twikiRobot88x31.gif 1
+/twiki/view/Main/WebHome        1
+
+INPUT 2: ./gradlew run --args="Task1b_PathCountAscending task1a task1b"
+
+OUTPUT 2:
+/twiki/view/Main/WebHome	1
+/twiki/pub/TWiki/TWikiLogos/twikiRobot88x31.gif	1
+/twiki/pub/TWiki/TWikiLogos/twikiRobot131x64.gif	1
+...
+...
+/favicon.ico	28
+/	31
+/twiki/pub/TWiki/TWikiLogos/twikiRobot46x50.gif	32
+/twiki/bin/view/Main/WebHome	40
+
+----------------------------------------------------------------------------------------------------
+Task 2. Requests count for each HTTP response code, sorted by response code (ascending)
+
+INPUT 1: ./gradlew run --args="Task2a_HTTPCountAscending input_access_log task2a"
+
+OUTPUT 1:
+200	1272
+302	6
+401	123
+404	5
+
+INPUT 2: ./gradlew run --args="Task2b_HTTPCountAscending task2a task2b"
+
+OUTPUT 2:
+404	5
+302	6
+401	123
+200	1272
+
+----------------------------------------------------------------------------------------------------
+Task 3. Total bytes sent to the client with a specified hostname or IPv4 address (you may hard code an address)
+
+INPUT 1: ./gradlew run --args="Task3_HostnameBytes input_access_log task3"
+
+OUTPUT 1:
+200.160.249.68.bmf.com.br	13269
+
+----------------------------------------------------------------------------------------------------
+Task 4. Based on a given URL (hard coded), compute a request count for each client (hostname or IPv4) who accessed that URL, sorted by request count (ascending)
+
+INPUT 1: ./gradlew run --args="Task4a_URLClientCount input_access_log task4a"
+
+OUTPUT 1:
+10.0.0.153	4
+128.227.88.79	5
+195.246.13.119	1
+...
+...
+spot.nnacorp.com	1
+ts04-ip92.hevanet.com	1
+user-0c8hdkf.cable.mindspring.com	1
+
+INPUT 2: ./gradlew run --args="Task4b_URLClientCount task4a task4b"
+
+OUTPUT 2:
+user-0c8hdkf.cable.mindspring.com	1
+ts04-ip92.hevanet.com	1
+spot.nnacorp.com	1
+...
+...
+prxint-sxb3.e-i.net	2
+10.0.0.153	4
+128.227.88.79	5
+
+
+----------------------------------------------------------------------------------------------------
+Task 5. Request count for each calendar month and year, sorted chronologically
+
+INPUT 1: ./gradlew run --args="Task5_MonthYearCount input_access_log task5"
+
+OUTPUT 1:
+Feb-2004	8
+Mar-2004	1406
+
+----------------------------------------------------------------------------------------------------
+Task6. For each calendar day that appears in the file, return total bytes sent. Sort by total bytes in ascending order.
+
+INPUT 1: ./gradlew run --args="Task6a_DayBytesTotal input_access_log task6a"
+
+OUTPUT 1:
+Feb-12	25697
+Mar-07	2427368
+Mar-08	4617302
+Mar-09	978411
+Mar-10	1357604
+Mar-11	1265093
+Mar-12	287227
+
+INPUT 2: ./gradlew run --args="Task6b_DayBytesTotal task6a task6b"
+
+OUTPUT 2:
+Feb-12	25697
+Mar-12	287227
+Mar-09	978411
+Mar-11	1265093
+Mar-10	1357604
+Mar-07	2427368
+Mar-08	4617302
